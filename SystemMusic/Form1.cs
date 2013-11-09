@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace SystemMusic
 {
     public partial class Form1 : Form
     {
-        private Mp3Player _mp3Player;
+        private Mp3Player _mp3Player; // Declare our mp3 player.
 
         public Form1()
         {
@@ -48,7 +49,7 @@ namespace SystemMusic
 
         private void systemMusicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Created and mantainted by Kami Mikusuki.", "About");
+            MessageBox.Show("Created and mantainted by Kami Mikazuki.", "About");
         }
 
         private void loadMusicToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace SystemMusic
                 }
             }
         }
-
+        #region Mp3 player functions Play, Pause, Stop buttons are located here.
         private void button1_Click(object sender, EventArgs e)
         {
             if (_mp3Player != null)
@@ -83,5 +84,6 @@ namespace SystemMusic
             if (_mp3Player != null)
                 _mp3Player.Stop();
         }
+        #endregion
     }
 }
